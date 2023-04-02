@@ -1,5 +1,6 @@
 package com.impacta.cadastro.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,11 +29,10 @@ public class User {
 
 
     @NotNull
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     @NotNull
     @Column(name = "password")
     private String password;
-
 }
