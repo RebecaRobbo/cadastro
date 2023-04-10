@@ -4,18 +4,19 @@ import com.impacta.cadastro.dto.UserDTO;
 import com.impacta.cadastro.entity.User;
 import com.impacta.cadastro.repository.UserRepository;
 import com.impacta.cadastro.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
 
 @Service
 public class UserServiceImpl implements UserService {
-    //@Autowired
+    @Autowired
     private UserRepository userRepository;
 
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+//    public UserServiceImpl(UserRepository userRepository) {
+//        this.userRepository = userRepository;
+//    }
 
     public User createUser(User user) {
         User userByEmail = userRepository.findUserByEmail(user.getEmail());

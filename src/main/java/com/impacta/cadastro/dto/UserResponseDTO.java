@@ -1,8 +1,5 @@
 package com.impacta.cadastro.dto;
 
-//import com.sun.istack.NotNull;
-
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,12 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
+public class UserResponseDTO {
 
-    @NotNull
-    private String email;
-
-    @NotNull
-    private String password;
-
+    private Boolean response = Boolean.FALSE;
 }
